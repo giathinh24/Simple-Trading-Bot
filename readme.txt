@@ -1,6 +1,7 @@
--The code can be run by simply call the file name ("python main.py").
--Initial parameters are as follow:
-    +Exchange: Binance
-    +Symbol: BTC/USDT
-    +Candle: 1 minute
--The result to the screen should be the closed price of 1 minute candles in the last 500 minutes. Below that will be EMA10, EMA20, MA50, RSI, MACD, MACD SIGNAL, MACD HISTOGRAM of the last candle.
+-The strategy is as follow:
+    +Open long/buy position when: EMA10>EMA20>MA50 and RSI<70 and MACD>0
+    +Open short/sell order when: EMA10<EMA20<MA50 and RSI>30 and MACD<0
+-Initial parameters can be changed in line 98=106 of main.py
+-If you want to run live, fill your API keys in and remove the comments of line 118-119
+-Dry run will be running at default. If you choose to run live, dry run features will double as a logging method
+-Dry run/logging result will be stored in a CSV file named dryRunResult.csv
