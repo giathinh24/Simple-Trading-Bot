@@ -2,3 +2,5 @@ ccxt
 datetime
 numpy
 pandas
+csv
+requests
